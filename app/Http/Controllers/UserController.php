@@ -7,7 +7,8 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    public function show(User $user){
-        return $user;
+    public function update(Request $request, $id)
+    {
+        //
     }
 }
