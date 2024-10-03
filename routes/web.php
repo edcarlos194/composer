@@ -55,15 +55,15 @@ Route::get('/', function () {
 //    return $user;
 //});
 //Route::get('/user/{user:email}', function (\App\Models\User $user){
-    return $user;
+    //return $user;
 //});
 //Route::get('/user/{user}', [\App\Http\Controllers\UserController::class, 'show']);
-Route::get('/request', function (\Illuminate\Http\Request $request){
+//Route::get('/request', function (\Illuminate\Http\Request $request){
 
-    $r = $request;
-    dd($r);
-});
-Route::get('/request', function(\Illuminate\Http\Request $request){
+  //  $r = $request;
+  //  dd($r);
+//});
+//Route::get('/request', function(\Illuminate\Http\Request $request){
     //dd($request->all());
     //dd($request->input('sobrenome'));
     //dd($request->query('nome'));
@@ -74,4 +74,11 @@ Route::get('/request', function(\Illuminate\Http\Request $request){
     //dd($request->whenFilled('nome', function($xuxa){ return $xuxa;}));
     //dd($request->ip());
 
-});
+//});
+Route::get('/user/{user}', [\App\Http\Controllers\UserController::class, 'show'])->name('user.show');
+
+Route::get('/users', [\App\Http\Controllers\UserController::class, 'index'])->name('user.index');
+
+// Route::get('/', function () {
+//     return view('greeting', ['name' => 'Finn']);
+// });
